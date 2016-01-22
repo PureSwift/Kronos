@@ -15,6 +15,7 @@ public struct Matrix3: OpenGLMathType {
     
     // MARK: - Initialization
     
+    @inline(__always)
     public init(_ m0: (Float, Float, Float),
                 _ m1: (Float, Float, Float),
                 _ m2: (Float, Float, Float))
@@ -28,56 +29,56 @@ public struct Matrix3: OpenGLMathType {
     
     public var m00: Float {
         
-        get { return value.0 }
-        set { value.0 = newValue }
+        @inline(__always) get { return value.0 }
+        @inline(__always) set { value.0 = newValue }
     }
     
     public var m01: Float {
         
-        get { return value.1 }
-        set { value.1 = newValue }
+        @inline(__always) get { return value.1 }
+        @inline(__always) set { value.1 = newValue }
     }
     
     public var m02: Float {
         
-        get { return value.2 }
-        set { value.2 = newValue }
+        @inline(__always) get { return value.2 }
+        @inline(__always) set { value.2 = newValue }
     }
     
     public var m10: Float {
         
-        get { return value.3 }
-        set { value.3 = newValue }
+        @inline(__always) get { return value.3 }
+        @inline(__always) set { value.3 = newValue }
     }
     
     public var m11: Float {
         
-        get { return value.4 }
-        set { value.4 = newValue }
+        @inline(__always) get { return value.4 }
+        @inline(__always) set { value.4 = newValue }
     }
     
     public var m12: Float {
         
-        get { return value.5 }
-        set { value.5 = newValue }
+        @inline(__always) get { return value.5 }
+        @inline(__always) set { value.5 = newValue }
     }
     
     public var m20: Float {
         
-        get { return value.6 }
-        set { value.6 = newValue }
+        @inline(__always) get { return value.6 }
+        @inline(__always) set { value.6 = newValue }
     }
     
     public var m21: Float {
         
-        get { return value.7 }
-        set { value.7 = newValue }
+        @inline(__always) get { return value.7 }
+        @inline(__always) set { value.7 = newValue }
     }
     
     public var m22: Float {
         
-        get { return value.8 }
-        set { value.8 = newValue }
+        @inline(__always) get { return value.8 }
+        @inline(__always) set { value.8 = newValue }
     }
     
     // MARK: - Subscripting
