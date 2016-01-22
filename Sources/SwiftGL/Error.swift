@@ -6,8 +6,12 @@
 //  Copyright © 2016 PureSwift. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS)
+    import OpenGLES
+#endif
+
 /// OpenGL Errors
-public enum OpenGLError: CInt, ErrorType {
+public enum OpenGLError: GLenum, ErrorType {
     
     case InvalidEnum        = 0x500
     
@@ -24,4 +28,13 @@ public enum OpenGLError: CInt, ErrorType {
     #endif
     
     case OutOfMemory        = 0x505
+    
+    public static var currentError: OpenGLError? {
+        
+        let rawValue = glGetError()
+        
+        guard rawValue != 0 else { return nil }
+        
+        return OpenGLError(rawValue: rawValue)!
+    }
 }
