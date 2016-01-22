@@ -48,7 +48,7 @@ public struct Program {
         glAttachShader(name, shader.name)
     }
     
-    /// Dettaches a shader from the program.
+    /// Detaches a shader from the program.
     @inline(__always)
     public func detach(shader: Shader) {
         
