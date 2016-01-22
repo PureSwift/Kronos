@@ -48,9 +48,21 @@ public struct Program {
         glAttachShader(name, shader.name)
     }
     
-    /// glLinkProgram links the program object specified by program. Shader objects of type GL_VERTEX_SHADER attached to program are used to create an executable that will run on the programmable vertex processor. Shader objects of type GL_FRAGMENT_SHADER attached to program are used to create an executable that will run on the programmable fragment processor.
+    /// Dettaches a shader from the program.
+    @inline(__always)
+    public func detach(shader: Shader) {
+        
+        glDetachShader(name, shader.name)
+    }
+    
+    /// Links the program object specified by program.
     ///
-    /// The status of the link operation will be stored as part of the program object's state. This value will be set to GL_TRUE if the program object was linked without errors and is ready for use, and GL_FALSE otherwise. It can be queried by calling glGetProgramiv with arguments program and GL_LINK_STATUS.
+    /// Shader objects of type `GL_VERTEX_SHADER` attached to program are used to create an executable that will run on the programmable vertex processor. 
+    /// Shader objects of type `GL_FRAGMENT_SHADER` attached to program are used to create an executable that will run on the programmable fragment processor.
+    ///
+    /// The status of the link operation will be stored as part of the program object's state. 
+    /// This value will be set to `GL_TRUE` if the program object was linked without errors and is ready for use, and 
+    /// `GL_FALSE` otherwise. It can be queried by calling glGetProgramiv with arguments program and `GL_LINK_STATUS`.
     @inline(__always)
     public func link() {
         
