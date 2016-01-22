@@ -15,6 +15,11 @@ import SwiftGL
 
 final class Matrix4Tests: XCTestCase {
     
+    func testSize() {
+        
+        XCTAssert(sizeof(Matrix4) == (sizeof(Float) * 16))
+    }
+    
     func testMultiply() {
         
         let matrix1 = Matrix4((1,0,1,0), (0.5,0,0.5, 0), (0.5,0.0 ,0.5, 0), (1,0,1,0))

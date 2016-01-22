@@ -27,6 +27,61 @@ public struct Program {
         
         self.name = glCreateProgram()
         
-        assert(self.name != 0, "Could not create program. ")
+        assert(self.name != 0, "Could not create program. Error: \(OpenGLError.currentError)")
+    }
+    
+    @inline(__always)
+    public init(name: GLuint) {
+        
+        assert(name != 0)
+        assert(glIsProgram(name).boolValue)
+        
+        self.name = name
+    }
+    
+    // MARK: - Methods
+    
+    /// Attaches a shader to the program. 
+    @inline(__always)
+    public func attach(shader: Shader) {
+        
+        glAttachShader(name, shader.name)
+    }
+    
+    /// glLinkProgram links the program object specified by program. Shader objects of type GL_VERTEX_SHADER attached to program are used to create an executable that will run on the programmable vertex processor. Shader objects of type GL_FRAGMENT_SHADER attached to program are used to create an executable that will run on the programmable fragment processor.
+    ///
+    /// The status of the link operation will be stored as part of the program object's state. This value will be set to GL_TRUE if the program object was linked without errors and is ready for use, and GL_FALSE otherwise. It can be queried by calling glGetProgramiv with arguments program and GL_LINK_STATUS.
+    @inline(__always)
+    public func link() {
+        
+        glLinkProgram(name)
+    }
+    
+    /// Get the link status of the program.
+    public var linked: Bool {
+        
+        var linkStatus: GLint = 0
+        
+        glGetProgramiv(name, GLenum(GL_LINK_STATUS), &linkStatus)
+        
+        return (linkStatus != 0)
+    }
+    
+    /// Gets the info log.
+    public var log: String? {
+        
+        var logLength: GLint = 0
+        
+        glGetProgramiv(name, GLenum(GL_LINK_STATUS), &logLength)
+        
+        guard logLength > 0 else { return nil }
+        
+        let cString = UnsafeMutablePointer<CChar>.alloc(Int(logLength))
+        defer { cString.dealloc(Int(logLength)) }
+        
+        glGetProgramInfoLog(name, GLsizei(logLength), nil, cString)
+        
+        return String.fromCString(cString)!
     }
 }
+

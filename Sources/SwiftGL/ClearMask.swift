@@ -10,7 +10,7 @@
     import OpenGLES
 #endif
 
-/// Defines the values to use for specifying Context clear masks.
+/// Defines the values to use for specifying buffer clear masks.
 public enum ClearMask {
     
     case Color
@@ -20,6 +20,7 @@ public enum ClearMask {
     case Stencil
     
     /// Clear buffers to preset values.
+    @inline(__always)
     public static func clear(mask: [ClearMask]) {
         
         var glMask: GLbitfield = 0
