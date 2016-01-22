@@ -38,7 +38,7 @@ public struct Shader {
         
         // This function returns 0 if an error occurs creating the shader object.
         // GL_INVALID_ENUM is generated if shaderType is not an accepted value.
-        assert(self.name != 0)
+        assert(self.name != 0, "Could not create \(type) Shader")
     }
     
     @inline(__always)

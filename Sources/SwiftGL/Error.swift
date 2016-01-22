@@ -29,12 +29,22 @@ public enum OpenGLError: GLenum, ErrorType {
     
     case OutOfMemory        = 0x505
     
-    public static func currentError() throws {
+    public static var currentError: OpenGLError? {
         
         let rawValue = glGetError()
         
-        guard rawValue != 0 else { return }
+        guard rawValue != 0 else { return nil }
         
-        throw OpenGLError(rawValue: rawValue)!
+        guard let error = OpenGLError(rawValue: rawValue)
+            else { fatalError("Invalid, non-zero OpenGL error: \(rawValue)") }
+        
+        return error
+    }
+    
+    public static func throwError() throws {
+        
+        guard let error = OpenGLError.currentError else { return }
+        
+        throw error
     }
 }
