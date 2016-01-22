@@ -41,6 +41,7 @@ public struct Shader {
         assert(self.name != 0)
     }
     
+    @inline(__always)
     public init(name: GLuint) {
         
         assert(name != 0)
@@ -51,7 +52,7 @@ public struct Shader {
     
     // MARK: - Methods
     
-    
+    @inline(__always)
     public func compile() {
         
         glCompileShader(name)
