@@ -1,6 +1,6 @@
 //
 //  Vector3.swift
-//  Swallow
+//  SwiftGL
 //
 //  Created by Alsey Coleman Miller on 1/20/16.
 //  Copyright © 2016 PureSwift. All rights reserved.
@@ -63,7 +63,7 @@ public struct Vector3: OpenGLMathType {
     
     public subscript (index: Int) -> Float {
         
-        @inline(__always) get {
+        get {
             
             switch index {
                 
@@ -75,7 +75,7 @@ public struct Vector3: OpenGLMathType {
             }
         }
         
-        @inline(__always) set {
+        set {
             
             switch index {
                 

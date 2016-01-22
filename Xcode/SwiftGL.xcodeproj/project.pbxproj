@@ -23,6 +23,7 @@
 		6EE1726A1C51EA70005D65D8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE1725C1C51EA68005D65D8 /* main.swift */; };
 		6EE1726B1C51EA70005D65D8 /* Matrix4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE1725D1C51EA68005D65D8 /* Matrix4Tests.swift */; };
 		6EE1726F1C51EC8C005D65D8 /* Capability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE1726E1C51EC8C005D65D8 /* Capability.swift */; };
+		6EE172711C51F34C005D65D8 /* UIKitConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172701C51F34C005D65D8 /* UIKitConvertible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		6EE1725C1C51EA68005D65D8 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6EE1725D1C51EA68005D65D8 /* Matrix4Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4Tests.swift; sourceTree = "<group>"; };
 		6EE1726E1C51EC8C005D65D8 /* Capability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Capability.swift; sourceTree = "<group>"; };
+		6EE172701C51F34C005D65D8 /* UIKitConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitConvertible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		6EE172501C51EA68005D65D8 /* SwiftGL */ = {
 			isa = PBXGroup;
 			children = (
+				6EE172721C51F350005D65D8 /* UIKit Support */,
 				6EE1726D1C51EBFE005D65D8 /* OpenGL Extensions */,
 				6EE1726C1C51EBE5005D65D8 /* Math Types */,
 				6EE172551C51EA68005D65D8 /* Error.swift */,
@@ -164,6 +167,14 @@
 				6EE172521C51EA68005D65D8 /* GLboolean.swift */,
 			);
 			name = "OpenGL Extensions";
+			sourceTree = "<group>";
+		};
+		6EE172721C51F350005D65D8 /* UIKit Support */ = {
+			isa = PBXGroup;
+			children = (
+				6EE172701C51F34C005D65D8 /* UIKitConvertible.swift */,
+			);
+			name = "UIKit Support";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EE172711C51F34C005D65D8 /* UIKitConvertible.swift in Sources */,
 				6EE172631C51EA68005D65D8 /* OpenGLMathType.swift in Sources */,
 				6EE1725E1C51EA68005D65D8 /* ClearMask.swift in Sources */,
 				6EE172611C51EA68005D65D8 /* Matrix4.swift in Sources */,

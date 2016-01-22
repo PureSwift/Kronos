@@ -1,6 +1,6 @@
 //
 //  OpenGLError.swift
-//  Swallow
+//  SwiftGL
 //
 //  Created by Alsey Coleman Miller on 1/21/16.
 //  Copyright © 2016 PureSwift. All rights reserved.
