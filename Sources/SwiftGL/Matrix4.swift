@@ -31,7 +31,10 @@ public struct Matrix4: OpenGLMathType {
                       m3.0, m3.1, m3.2, m3.3)
     }
     
-    public static let Identity = Matrix4((0,0,0,0), (0,0,0,0), (0,0,0,0), (0,0,0,0))
+    public static let Identity = Matrix4((1,0,0,0),
+                                         (0,1,0,0),
+                                         (0,0,1,0),
+                                         (0,0,0,1))
     
     // MARK: - Accessors
     
