@@ -6,6 +6,10 @@
 //  Copyright © 2016 PureSwift. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS)
+    import OpenGLES
+#endif
+
 public enum StencilFunction: GLenum {
     
     case Never              = 0x0200

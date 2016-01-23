@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6EE172341C51E851005D65D8"
-               BuildableName = "SwiftGL.framework"
-               BlueprintName = "SwiftGL"
-               ReferencedContainer = "container:SwiftGL.xcodeproj">
+               BuildableName = "Kronos.framework"
+               BlueprintName = "Kronos"
+               ReferencedContainer = "container:Kronos.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6EE1723E1C51E851005D65D8"
-               BuildableName = "SwiftGLTests.xctest"
-               BlueprintName = "SwiftGLTests"
-               ReferencedContainer = "container:SwiftGL.xcodeproj">
+               BuildableName = "Kronos.xctest"
+               BlueprintName = "KronosTests"
+               ReferencedContainer = "container:Kronos.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6EE172341C51E851005D65D8"
-            BuildableName = "SwiftGL.framework"
-            BlueprintName = "SwiftGL"
-            ReferencedContainer = "container:SwiftGL.xcodeproj">
+            BuildableName = "Kronos.framework"
+            BlueprintName = "Kronos"
+            ReferencedContainer = "container:Kronos.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6EE172341C51E851005D65D8"
-            BuildableName = "SwiftGL.framework"
-            BlueprintName = "SwiftGL"
-            ReferencedContainer = "container:SwiftGL.xcodeproj">
+            BuildableName = "Kronos.framework"
+            BlueprintName = "Kronos"
+            ReferencedContainer = "container:Kronos.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6EE172341C51E851005D65D8"
-            BuildableName = "SwiftGL.framework"
-            BlueprintName = "SwiftGL"
-            ReferencedContainer = "container:SwiftGL.xcodeproj">
+            BuildableName = "Kronos.framework"
+            BlueprintName = "Kronos"
+            ReferencedContainer = "container:Kronos.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

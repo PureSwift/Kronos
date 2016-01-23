@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6E18ED471C542E4A002896B6 /* StencilFuncion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18ED461C542E4A002896B6 /* StencilFuncion.swift */; };
 		6EE172391C51E851005D65D8 /* SwiftGL.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE172381C51E851005D65D8 /* SwiftGL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EE172401C51E851005D65D8 /* SwiftGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE172351C51E851005D65D8 /* SwiftGL.framework */; };
+		6EE172401C51E851005D65D8 /* Kronos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE172351C51E851005D65D8 /* Kronos.framework */; };
 		6EE1725E1C51EA68005D65D8 /* ClearMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172511C51EA68005D65D8 /* ClearMask.swift */; };
 		6EE1725F1C51EA68005D65D8 /* GLboolean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172521C51EA68005D65D8 /* GLboolean.swift */; };
 		6EE172601C51EA68005D65D8 /* Matrix3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172531C51EA68005D65D8 /* Matrix3.swift */; };
@@ -42,10 +42,10 @@
 
 /* Begin PBXFileReference section */
 		6E18ED461C542E4A002896B6 /* StencilFuncion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StencilFuncion.swift; sourceTree = "<group>"; };
-		6EE172351C51E851005D65D8 /* SwiftGL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE172351C51E851005D65D8 /* Kronos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kronos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE172381C51E851005D65D8 /* SwiftGL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGL.h; sourceTree = "<group>"; };
 		6EE1723A1C51E851005D65D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6EE1723F1C51E851005D65D8 /* SwiftGLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE1723F1C51E851005D65D8 /* Kronos.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Kronos.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE172461C51E851005D65D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EE172511C51EA68005D65D8 /* ClearMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearMask.swift; sourceTree = "<group>"; };
 		6EE172521C51EA68005D65D8 /* GLboolean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLboolean.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EE172401C51E851005D65D8 /* SwiftGL.framework in Frameworks */,
+				6EE172401C51E851005D65D8 /* Kronos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +99,8 @@
 		6EE172361C51E851005D65D8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6EE172351C51E851005D65D8 /* SwiftGL.framework */,
-				6EE1723F1C51E851005D65D8 /* SwiftGLTests.xctest */,
+				6EE172351C51E851005D65D8 /* Kronos.framework */,
+				6EE1723F1C51E851005D65D8 /* Kronos.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,14 +125,14 @@
 		6EE1724F1C51EA68005D65D8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				6EE172501C51EA68005D65D8 /* SwiftGL */,
+				6EE172501C51EA68005D65D8 /* Kronos */,
 				6EE1725B1C51EA68005D65D8 /* UnitTests */,
 			);
 			name = Sources;
 			path = ../Sources;
 			sourceTree = "<group>";
 		};
-		6EE172501C51EA68005D65D8 /* SwiftGL */ = {
+		6EE172501C51EA68005D65D8 /* Kronos */ = {
 			isa = PBXGroup;
 			children = (
 				6EE172721C51F350005D65D8 /* UIKit Support */,
@@ -148,7 +148,7 @@
 				6EE172731C51F4FD005D65D8 /* Color.swift */,
 				6E18ED461C542E4A002896B6 /* StencilFuncion.swift */,
 			);
-			path = SwiftGL;
+			path = Kronos;
 			sourceTree = "<group>";
 		};
 		6EE1725B1C51EA68005D65D8 /* UnitTests */ = {
@@ -203,9 +203,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6EE172341C51E851005D65D8 /* SwiftGL */ = {
+		6EE172341C51E851005D65D8 /* Kronos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6EE172491C51E851005D65D8 /* Build configuration list for PBXNativeTarget "SwiftGL" */;
+			buildConfigurationList = 6EE172491C51E851005D65D8 /* Build configuration list for PBXNativeTarget "Kronos" */;
 			buildPhases = (
 				6EE172301C51E851005D65D8 /* Sources */,
 				6EE172311C51E851005D65D8 /* Frameworks */,
@@ -216,14 +216,14 @@
 			);
 			dependencies = (
 			);
-			name = SwiftGL;
+			name = Kronos;
 			productName = SwiftGL;
-			productReference = 6EE172351C51E851005D65D8 /* SwiftGL.framework */;
+			productReference = 6EE172351C51E851005D65D8 /* Kronos.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6EE1723E1C51E851005D65D8 /* SwiftGLTests */ = {
+		6EE1723E1C51E851005D65D8 /* KronosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6EE1724C1C51E851005D65D8 /* Build configuration list for PBXNativeTarget "SwiftGLTests" */;
+			buildConfigurationList = 6EE1724C1C51E851005D65D8 /* Build configuration list for PBXNativeTarget "KronosTests" */;
 			buildPhases = (
 				6EE1723B1C51E851005D65D8 /* Sources */,
 				6EE1723C1C51E851005D65D8 /* Frameworks */,
@@ -234,9 +234,9 @@
 			dependencies = (
 				6EE172421C51E851005D65D8 /* PBXTargetDependency */,
 			);
-			name = SwiftGLTests;
+			name = KronosTests;
 			productName = SwiftGLTests;
-			productReference = 6EE1723F1C51E851005D65D8 /* SwiftGLTests.xctest */;
+			productReference = 6EE1723F1C51E851005D65D8 /* Kronos.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -257,7 +257,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6EE1722F1C51E851005D65D8 /* Build configuration list for PBXProject "SwiftGL" */;
+			buildConfigurationList = 6EE1722F1C51E851005D65D8 /* Build configuration list for PBXProject "Kronos" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -269,8 +269,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6EE172341C51E851005D65D8 /* SwiftGL */,
-				6EE1723E1C51E851005D65D8 /* SwiftGLTests */,
+				6EE172341C51E851005D65D8 /* Kronos */,
+				6EE1723E1C51E851005D65D8 /* KronosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -331,7 +331,7 @@
 /* Begin PBXTargetDependency section */
 		6EE172421C51E851005D65D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6EE172341C51E851005D65D8 /* SwiftGL */;
+			target = 6EE172341C51E851005D65D8 /* Kronos */;
 			targetProxy = 6EE172411C51E851005D65D8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -439,7 +439,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SwiftGL;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Kronos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -455,7 +455,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SwiftGL;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Kronos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -466,7 +466,7 @@
 				INFOPLIST_FILE = SwiftGLTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SwiftGLTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Kronos;
 			};
 			name = Debug;
 		};
@@ -476,14 +476,14 @@
 				INFOPLIST_FILE = SwiftGLTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SwiftGLTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Kronos;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6EE1722F1C51E851005D65D8 /* Build configuration list for PBXProject "SwiftGL" */ = {
+		6EE1722F1C51E851005D65D8 /* Build configuration list for PBXProject "Kronos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6EE172471C51E851005D65D8 /* Debug */,
@@ -492,7 +492,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6EE172491C51E851005D65D8 /* Build configuration list for PBXNativeTarget "SwiftGL" */ = {
+		6EE172491C51E851005D65D8 /* Build configuration list for PBXNativeTarget "Kronos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6EE1724A1C51E851005D65D8 /* Debug */,
@@ -501,7 +501,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6EE1724C1C51E851005D65D8 /* Build configuration list for PBXNativeTarget "SwiftGLTests" */ = {
+		6EE1724C1C51E851005D65D8 /* Build configuration list for PBXNativeTarget "KronosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6EE1724D1C51E851005D65D8 /* Debug */,

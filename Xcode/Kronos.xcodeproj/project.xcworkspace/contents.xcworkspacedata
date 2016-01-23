@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SwiftGL.xcodeproj">
+      location = "self:/Users/coleman/Developer/SwiftGL/Xcode/Kronos.xcodeproj">
    </FileRef>
 </Workspace>
