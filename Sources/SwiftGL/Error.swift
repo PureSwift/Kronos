@@ -13,21 +13,23 @@
 /// OpenGL Errors
 public enum OpenGLError: GLenum, ErrorType {
     
-    case InvalidEnum        = 0x500
+    case InvalidEnum                    = 0x0500
     
-    case InvalidValue       = 0x501
+    case InvalidValue                   = 0x0501
     
-    case InvalidOperation   = 0x502
+    case InvalidOperation               = 0x0502
     
     #if os(OSX)
     
-    case StackOverflow      = 0x503
+    case StackOverflow                  = 0x0503
     
-    case StackUnderflow     = 0x504
+    case StackUnderflow                 = 0x0504
     
     #endif
     
-    case OutOfMemory        = 0x505
+    case OutOfMemory                    = 0x0505
+    
+    case InvalidFramebufferOperation    = 0x0506
     
     public static var currentError: OpenGLError? {
         
