@@ -41,6 +41,13 @@ public struct Program {
     
     // MARK: - Methods
     
+    /// Installs a program object as part of current rendering state. 
+    @inline(__always)
+    static public func setCurrent(program: Program) {
+        
+        glUseProgram(program.name)
+    }
+    
     /// Attaches a shader to the program. 
     @inline(__always)
     public func attach(shader: Shader) {
