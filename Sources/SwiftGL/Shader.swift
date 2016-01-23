@@ -94,5 +94,17 @@ public struct Shader {
         
         glShaderSource(name, GLsizei(source.count), pointer, nil)
     }
+    
+    // MARK: - Accessors
+    
+    /// Get the compile status of the shader.
+    public var compiled: Bool {
+        
+        var status: GLint = 0
+        
+        glGetShaderiv(name, GLenum(GL_COMPILE_STATUS), &status)
+        
+        return (status != 0)
+    }
 }
 
