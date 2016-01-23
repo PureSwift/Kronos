@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6EE172391C51E851005D65D8 /* SwiftGL.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE172381C51E851005D65D8 /* SwiftGL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EE172401C51E851005D65D8 /* SwiftGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE172351C51E851005D65D8 /* SwiftGL.framework */; };
-		6EE172451C51E851005D65D8 /* SwiftGLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172441C51E851005D65D8 /* SwiftGLTests.swift */; };
 		6EE1725E1C51EA68005D65D8 /* ClearMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172511C51EA68005D65D8 /* ClearMask.swift */; };
 		6EE1725F1C51EA68005D65D8 /* GLboolean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172521C51EA68005D65D8 /* GLboolean.swift */; };
 		6EE172601C51EA68005D65D8 /* Matrix3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172531C51EA68005D65D8 /* Matrix3.swift */; };
@@ -45,7 +44,6 @@
 		6EE172381C51E851005D65D8 /* SwiftGL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGL.h; sourceTree = "<group>"; };
 		6EE1723A1C51E851005D65D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EE1723F1C51E851005D65D8 /* SwiftGLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EE172441C51E851005D65D8 /* SwiftGLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGLTests.swift; sourceTree = "<group>"; };
 		6EE172461C51E851005D65D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EE172511C51EA68005D65D8 /* ClearMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearMask.swift; sourceTree = "<group>"; };
 		6EE172521C51EA68005D65D8 /* GLboolean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLboolean.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 		6EE172431C51E851005D65D8 /* SwiftGLTests */ = {
 			isa = PBXGroup;
 			children = (
-				6EE172441C51E851005D65D8 /* SwiftGLTests.swift */,
 				6EE172461C51E851005D65D8 /* Info.plist */,
 			);
 			path = SwiftGLTests;
@@ -322,7 +319,6 @@
 			files = (
 				6EE1726A1C51EA70005D65D8 /* main.swift in Sources */,
 				6EE1726B1C51EA70005D65D8 /* Matrix4Tests.swift in Sources */,
-				6EE172451C51E851005D65D8 /* SwiftGLTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
