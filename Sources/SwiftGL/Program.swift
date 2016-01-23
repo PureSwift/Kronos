@@ -69,6 +69,8 @@ public struct Program {
         glLinkProgram(name)
     }
     
+    // MARK: - Accessors
+    
     /// Get the link status of the program.
     public var linked: Bool {
         
@@ -77,6 +79,16 @@ public struct Program {
         glGetProgramiv(name, GLenum(GL_LINK_STATUS), &linkStatus)
         
         return (linkStatus != 0)
+    }
+    
+    /// Get the compile status of the program.
+    public var compiled: Bool {
+        
+        var status: GLint = 0
+        
+        glGetProgramiv(name, GLenum(GL_COMPILE_STATUS), &status)
+        
+        return (status != 0)
     }
     
     /// Gets the info log.
