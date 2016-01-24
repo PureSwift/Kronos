@@ -228,6 +228,7 @@ public extension Vector4 {
                        value.3 + ((vectorEnd.value.3 - value.3) * interpolation))
     }
     
+    /// Performs a 3D cross product. The last component of the resulting cross product will be zeroed out.
     @inline(__always)
     func crossProduct(rhs: Vector4) -> Vector4 {
         

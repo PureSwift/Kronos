@@ -58,9 +58,6 @@ public protocol OpenGLVectorType: OpenGLMathType, Comparable {
     /// Returns a new vector created by linearly interpreting between two vectors.
     func lerp(vectorEnd: Self, interpolation: Float) -> Self
     
-    /// Performs a 3D cross product. The last component of the resulting cross product will be zeroed out.
-    func crossProduct(rhs: Self) -> Self
-    
     /// Project the vector onto the vector, `projectionVector`.
     func project(projectionVector: Self) -> Self
 }
