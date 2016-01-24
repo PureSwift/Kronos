@@ -25,12 +25,35 @@ public struct Vector4: OpenGLMathType {
 // MARK: - Equatable
 
 @inline(__always)
-public func ==(lhs: Vector4, rhs: Vector4) -> Bool {
+public func == (lhs: Vector4, rhs: Vector4) -> Bool {
     
     return lhs.value.0  == rhs.value.0
         && lhs.value.1  == rhs.value.1
         && lhs.value.2  == rhs.value.2
         && lhs.value.3  == rhs.value.3
+}
+
+/// Returns a Boolean value that states whether all the components of the source vector are equal to a scalar value.
+/// 
+/// - Returns: `true` if all of the vector’s components are equal to value, `false` otherwise.
+@inline(__always)
+public func == (lhs: Vector4, rhs: Float) -> Bool {
+    
+    return lhs.value.0  == rhs
+        && lhs.value.1  == rhs
+        && lhs.value.2  == rhs
+        && lhs.value.3  == rhs
+}
+
+// MARK: - Comparable
+
+@inline(__always)
+public func < (lhs: Vector4, rhs: Vector4) -> Bool {
+    
+    return lhs.value.0  < rhs.value.0
+        && lhs.value.1  < rhs.value.1
+        && lhs.value.2  < rhs.value.2
+        && lhs.value.3  < rhs.value.3
 }
 
 // MARK: - Math
@@ -66,10 +89,10 @@ public func - (lhs: Vector4, rhs: Vector4) -> Vector4 {
 @inline(__always)
 public func * (lhs: Vector4, rhs: Vector4) -> Vector4 {
     
-    return Vector4(lhs.value.0 - rhs.value.0,
-                   lhs.value.1 - rhs.value.1,
-                   lhs.value.2 - rhs.value.2,
-                   lhs.value.3 - rhs.value.3)
+    return Vector4(lhs.value.0 * rhs.value.0,
+                   lhs.value.1 * rhs.value.1,
+                   lhs.value.2 * rhs.value.2,
+                   lhs.value.3 * rhs.value.3)
 }
 
 /// Divide
@@ -119,4 +142,52 @@ public func / (lhs: Vector4, rhs: Float) -> Vector4 {
     return Vector4(lhs.value.0 / rhs, lhs.value.1 / rhs, lhs.value.2 / rhs, lhs.value.3 / rhs)
 }
 
+public extension Vector4 {
+    
+    /// Returns a new vector whose component value at each position is the largest component value 
+    /// at the same position in the source vectors.
+    @inline(__always)
+    func maximum(rhs: Vector4) -> Vector4 {
+        
+        var max = self
+        
+        if rhs.value.0 > value.0 {
+            max.value.0 = value.0
+        }
+        if rhs.value.1 > value.1 {
+            max.value.1 = value.1
+        }
+        if rhs.value.2 > value.2 {
+            max.value.2 = value.2
+        }
+        if rhs.value.3 > value.3 {
+            max.value.3 = value.3
+        }
+        
+        return max
+    }
+    
+    /// Returns a new vector whose component value at each position is the smallest component value 
+    /// at the same position in the source vectors.
+    @inline(__always)
+    func minimum(rhs: Vector4) -> Vector4 {
+        
+        var min = self
+        
+        if rhs.value.0 < value.0 {
+            min.value.0 = value.0
+        }
+        if rhs.value.1 < value.1 {
+            min.value.1 = value.1
+        }
+        if rhs.value.2 < value.2 {
+            min.value.2 = value.2
+        }
+        if rhs.value.3 < value.3 {
+            min.value.3 = value.3
+        }
+        
+        return min
+    }
+}
 
