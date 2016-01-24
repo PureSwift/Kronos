@@ -6,6 +6,12 @@
 //  Copyright © 2016 PureSwift. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS)
+    import Darwin.C
+#elseif os(Linux)
+    import Glibc
+#endif
+
 /// A representation of a 4-component vector.
 public struct Vector4: OpenGLVectorType {
     
@@ -183,6 +189,25 @@ public extension Vector4 {
         }
         
         return min
+    }
+    
+    @inline(__always)
+    func normalize() -> Vector4 {
+        
+        let scale = Float(1.0) / self.length
+        let vector = self * scale
+        return vector
+    }
+    
+    @inline(__always)
+    func dotProduct(rhs: Vector4) -> Float {
+        
+        return value.0 * rhs.value.0 + value.1 * rhs.value.1 + value.2 * rhs.value.2 + value.3 * rhs.value.3
+    }
+    
+    var length: Float {
+        
+        return sqrt(value.0 * value.0 + value.1 * value.1 + value.2 * value.2 + value.3 * value.3)
     }
 }
 
