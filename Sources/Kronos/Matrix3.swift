@@ -136,7 +136,7 @@ public struct Matrix3: MatrixType {
 // MARK: - Equatable
 
 @inline(__always)
-public func ==(lhs: Matrix3, rhs: Matrix3) -> Bool {
+public func == (lhs: Matrix3, rhs: Matrix3) -> Bool {
     
     return lhs.value.0  == rhs.value.0
         && lhs.value.1  == rhs.value.1
@@ -147,6 +147,69 @@ public func ==(lhs: Matrix3, rhs: Matrix3) -> Bool {
         && lhs.value.6  == rhs.value.6
         && lhs.value.7  == rhs.value.7
         && lhs.value.8  == rhs.value.8
+}
+
+// MARK: - Math
+
+@inline(__always)
+public func + (lhs: Matrix3, rhs: Matrix3) -> Matrix3 {
+    
+    var m = Matrix3()
+    
+    m.value.0 = lhs.value.0 - rhs.value.0
+    m.value.1 = lhs.value.1 - rhs.value.1
+    m.value.2 = lhs.value.2 - rhs.value.2
+    
+    m.value.3 = lhs.value.3 - rhs.value.3
+    m.value.4 = lhs.value.4 - rhs.value.4
+    m.value.5 = lhs.value.5 - rhs.value.5
+    
+    m.value.6 = lhs.value.6 - rhs.value.6
+    m.value.7 = lhs.value.7 - rhs.value.7
+    m.value.8 = lhs.value.8 - rhs.value.8
+    
+    return m;
+}
+
+@inline(__always)
+public func - (lhs: Matrix3, rhs: Matrix3) -> Matrix3 {
+    
+    var m = Matrix3()
+    
+    m.value.0 = lhs.value.0 + rhs.value.0
+    m.value.1 = lhs.value.1 + rhs.value.1
+    m.value.2 = lhs.value.2 + rhs.value.2
+    
+    m.value.3 = lhs.value.3 + rhs.value.3
+    m.value.4 = lhs.value.4 + rhs.value.4
+    m.value.5 = lhs.value.5 + rhs.value.5
+    
+    m.value.6 = lhs.value.6 + rhs.value.6
+    m.value.7 = lhs.value.7 + rhs.value.7
+    m.value.8 = lhs.value.8 + rhs.value.8
+    
+    return m
+}
+
+/// Multiply
+@inline(__always)
+public func * (lhs: Matrix3, rhs: Matrix3) -> Matrix3 {
+    
+    var m = Matrix3()
+    
+    m.value.0 = lhs.value.0 *  rhs.value.0 + lhs.value.3 *  rhs.value.1 + lhs.value.6 *  rhs.value.2
+    m.value.3 = lhs.value.0 *  rhs.value.3 + lhs.value.3 *  rhs.value.4 + lhs.value.6 *  rhs.value.5
+    m.value.6 = lhs.value.0 *  rhs.value.6 + lhs.value.3 *  rhs.value.7 + lhs.value.6 *  rhs.value.8
+    
+    m.value.1 = lhs.value.1 *  rhs.value.0 + lhs.value.4 *  rhs.value.1 + lhs.value.7 *  rhs.value.2
+    m.value.4 = lhs.value.1 *  rhs.value.3 + lhs.value.4 *  rhs.value.4 + lhs.value.7 *  rhs.value.5
+    m.value.7 = lhs.value.1 *  rhs.value.6 + lhs.value.4 *  rhs.value.7 + lhs.value.7 *  rhs.value.8
+    
+    m.value.2 = lhs.value.2 *  rhs.value.0 + lhs.value.5 *  rhs.value.1 + lhs.value.8 *  rhs.value.2
+    m.value.5 = lhs.value.2 *  rhs.value.3 + lhs.value.5 *  rhs.value.4 + lhs.value.8 *  rhs.value.5
+    m.value.8 = lhs.value.2 *  rhs.value.6 + lhs.value.5 *  rhs.value.7 + lhs.value.8 *  rhs.value.8
+    
+    return m
 }
 
 // MARK: - Darwin Support

@@ -281,7 +281,7 @@ public func - (lhs: Matrix4, rhs: Matrix4) -> Matrix4 {
 @inline(__always)
 public func * (lhs: Matrix4, rhs: Matrix4) -> Matrix4 {
     
-    var m = Matrix4.identity
+    var m = Matrix4()
     
     m.value.0  = lhs.value.0 * rhs.value.0  + lhs.value.4 * rhs.value.1  + lhs.value.8 * rhs.value.2   + lhs.value.12 * rhs.value.3;
     m.value.4  = lhs.value.0 * rhs.value.4  + lhs.value.4 * rhs.value.5  + lhs.value.8 * rhs.value.6   + lhs.value.12 * rhs.value.7;
