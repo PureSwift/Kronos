@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6EE1723E1C51E851005D65D8"
-               BuildableName = "Kronos.xctest"
+               BuildableName = "KronosTests.xctest"
                BlueprintName = "KronosTests"
                ReferencedContainer = "container:Kronos.xcodeproj">
             </BuildableReference>

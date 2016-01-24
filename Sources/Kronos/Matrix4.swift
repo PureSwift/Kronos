@@ -215,6 +215,7 @@ public func ==(lhs: Matrix4, rhs: Matrix4) -> Bool {
 
 // MARK: - Math
 
+/// Multiply
 @inline(__always)
 public func * (lhs: Matrix4, rhs: Matrix4) -> Matrix4 {
     
