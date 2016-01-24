@@ -1,5 +1,5 @@
 //
-//  OpenGLMatrixType.swift
+//  MatrixType.swift
 //  Kronos
 //
 //  Created by Alsey Coleman Miller on 1/24/16.

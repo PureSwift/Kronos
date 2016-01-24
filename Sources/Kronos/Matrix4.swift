@@ -11,7 +11,7 @@
 - Note: m30, m31, and m32 correspond to the translation values tx, ty, and tz, respectively.
 m[12], m[13], and m[14] correspond to the translation values tx, ty, and tz, respectively.
 */
-public struct Matrix4: OpenGLMathType {
+public struct Matrix4: MathType {
     
     // MARK: - Value
     

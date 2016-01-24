@@ -7,7 +7,7 @@
 //
 
 /// A representation of a 2-component vector.
-public struct Vector2: OpenGLMathType {
+public struct Vector2: MathType {
     
     // MARK: - Properties
     

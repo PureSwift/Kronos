@@ -1,5 +1,5 @@
 //
-//  OpenGLMathType.swift
+//  MathType.swift
 //  Kronos
 //
 //  Created by Alsey Coleman Miller on 1/21/16.

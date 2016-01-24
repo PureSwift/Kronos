@@ -13,7 +13,7 @@
 #endif
 
 /// A representation of a 4-component vector.
-public struct Vector4: OpenGLVectorType {
+public struct Vector4: VectorType {
     
     public typealias Scalar = Float
     

@@ -1,5 +1,5 @@
 //
-//  OpenGLVectorType.swift
+//  VectorType.swift
 //  Kronos
 //
 //  Created by Alsey Coleman Miller on 1/24/16.
@@ -64,7 +64,7 @@ public protocol VectorType: MathType, Comparable {
 
 // MARK: - Protocol Extensions
 
-public extension OpenGLVectorType {
+public extension VectorType {
     
     @inline(__always)
     func normalize() -> Self {
