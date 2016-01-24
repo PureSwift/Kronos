@@ -51,9 +51,19 @@ public enum Capability: GLenum {
     
     public var enabled: Bool {
         
-        @inline(__always) get { return glIsEnabled(rawValue).boolValue }
+        return glIsEnabled(rawValue).boolValue
+    }
+    
+    @inline(__always)
+    public func enable() {
         
-        @inline(__always) set { newValue ? glEnable(rawValue) : glDisable(rawValue) }
+        glEnable(rawValue)
+    }
+    
+    @inline(__always)
+    public func disable() {
+        
+        glDisable(rawValue)
     }
 }
 
