@@ -7,7 +7,9 @@
 //
 
 /// A representation of a 4-component vector.
-public struct Vector4: OpenGLMathType {
+public struct Vector4: OpenGLVectorType {
+    
+    public typealias Scalar = Float
     
     // MARK: - Properties
     
@@ -33,9 +35,6 @@ public func == (lhs: Vector4, rhs: Vector4) -> Bool {
         && lhs.value.3  == rhs.value.3
 }
 
-/// Returns a Boolean value that states whether all the components of the source vector are equal to a scalar value.
-/// 
-/// - Returns: `true` if all of the vector’s components are equal to value, `false` otherwise.
 @inline(__always)
 public func == (lhs: Vector4, rhs: Float) -> Bool {
     
@@ -144,8 +143,6 @@ public func / (lhs: Vector4, rhs: Float) -> Vector4 {
 
 public extension Vector4 {
     
-    /// Returns a new vector whose component value at each position is the largest component value 
-    /// at the same position in the source vectors.
     @inline(__always)
     func maximum(rhs: Vector4) -> Vector4 {
         
@@ -167,8 +164,6 @@ public extension Vector4 {
         return max
     }
     
-    /// Returns a new vector whose component value at each position is the smallest component value 
-    /// at the same position in the source vectors.
     @inline(__always)
     func minimum(rhs: Vector4) -> Vector4 {
         

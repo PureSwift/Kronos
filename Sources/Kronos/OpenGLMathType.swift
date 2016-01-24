@@ -6,9 +6,33 @@
 //  Copyright © 2016 PureSwift. All rights reserved.
 //
 
-public protocol OpenGLMathType: Equatable, Comparable {
+/// OpenGL Math type
+public protocol OpenGLMathType: Equatable {
     
-    typealias PrimitiveValue
+    /// The scalar type. (e.g. `Float`)
+    typealias Scalar
     
-    var value: PrimitiveValue { get set }
+    /// The tuple type. (e.g. `(Float, Float)`)
+    typealias ScalarTuple
+    
+    /// The tuple value of the OpenGL Math type.
+    var value: ScalarTuple { get set }
+    
+    /// Add
+    ///
+    /// - Returns: A new vector whose components each represent the sum of the two components found in the 
+    /// same positions of the two source vectors.
+    func + (lhs: Self, rhs: Self) -> Self
+    
+    /// Subtract
+    ///
+    /// - Returns: A new vector whose components each represent the sum of the two components found in the
+    /// same positions of the two source vectors.
+    func - (lhs: Self, rhs: Self) -> Self
+    
+    /// Multiply
+    ///
+    /// - Returns: A new vector whose components each represent the product of the components 
+    /// found in the same positions of the two source vectors.
+    func * (lhs: Self, rhs: Self) -> Self
 }
