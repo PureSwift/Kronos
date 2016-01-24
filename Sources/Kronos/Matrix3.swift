@@ -7,7 +7,7 @@
 //
 
 /// A 3x3 matrix stored in column-major order.
-public struct Matrix3: MathType {
+public struct Matrix3: MatrixType {
     
     // MARK: - Value
     
@@ -24,6 +24,16 @@ public struct Matrix3: MathType {
                       m1.0, m1.1, m1.2,
                       m2.0, m2.1, m2.2)
     }
+    
+    @inline(__always)
+    public init() {
+        
+        self.value = (0,0,0,0,0,0,0,0,0)
+    }
+    
+    public static let identity = Matrix3((1,0,0),
+                                         (0,1,0),
+                                         (0,0,1))
     
     // MARK: - Accessors
     

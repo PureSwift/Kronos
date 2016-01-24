@@ -11,7 +11,7 @@
 - Note: m30, m31, and m32 correspond to the translation values tx, ty, and tz, respectively.
 m[12], m[13], and m[14] correspond to the translation values tx, ty, and tz, respectively.
 */
-public struct Matrix4: MathType {
+public struct Matrix4: MatrixType {
     
     // MARK: - Value
     
@@ -31,7 +31,13 @@ public struct Matrix4: MathType {
                       m3.0, m3.1, m3.2, m3.3)
     }
     
-    public static let Identity = Matrix4((1,0,0,0),
+    @inline(__always)
+    public init() {
+        
+        self.value = (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+    }
+    
+    public static let identity = Matrix4((1,0,0,0),
                                          (0,1,0,0),
                                          (0,0,1,0),
                                          (0,0,0,1))
@@ -215,11 +221,67 @@ public func ==(lhs: Matrix4, rhs: Matrix4) -> Bool {
 
 // MARK: - Math
 
+@inline(__always)
+public func + (lhs: Matrix4, rhs: Matrix4) -> Matrix4 {
+    
+    var m = Matrix4()
+    
+    m.value.0 = lhs.value.0 - rhs.value.0
+    m.value.1 = lhs.value.1 - rhs.value.1
+    m.value.2 = lhs.value.2 - rhs.value.2
+    m.value.3 = lhs.value.3 - rhs.value.3
+    
+    m.value.4 = lhs.value.4 - rhs.value.4
+    m.value.5 = lhs.value.5 - rhs.value.5
+    m.value.6 = lhs.value.6 - rhs.value.6
+    m.value.7 = lhs.value.7 - rhs.value.7
+    
+    m.value.8 = lhs.value.8 - rhs.value.8
+    m.value.9 = lhs.value.9 - rhs.value.9
+    m.value.10 = lhs.value.10 - rhs.value.10
+    m.value.11 = lhs.value.11 - rhs.value.11
+    
+    m.value.12 = lhs.value.12 - rhs.value.12
+    m.value.13 = lhs.value.13 - rhs.value.13
+    m.value.14 = lhs.value.14 - rhs.value.14
+    m.value.15 = lhs.value.15 - rhs.value.15
+    
+    return m
+}
+
+@inline(__always)
+public func - (lhs: Matrix4, rhs: Matrix4) -> Matrix4 {
+    
+    var m = Matrix4()
+    
+    m.value.0 = lhs.value.0 + rhs.value.0
+    m.value.1 = lhs.value.1 + rhs.value.1
+    m.value.2 = lhs.value.2 + rhs.value.2
+    m.value.3 = lhs.value.3 + rhs.value.3
+    
+    m.value.4 = lhs.value.4 + rhs.value.4
+    m.value.5 = lhs.value.5 + rhs.value.5
+    m.value.6 = lhs.value.6 + rhs.value.6
+    m.value.7 = lhs.value.7 + rhs.value.7
+    
+    m.value.8 = lhs.value.8 + rhs.value.8
+    m.value.9 = lhs.value.9 + rhs.value.9
+    m.value.10 = lhs.value.10 + rhs.value.10
+    m.value.11 = lhs.value.11 + rhs.value.11
+    
+    m.value.12 = lhs.value.12 + rhs.value.12
+    m.value.13 = lhs.value.13 + rhs.value.13
+    m.value.14 = lhs.value.14 + rhs.value.14
+    m.value.15 = lhs.value.15 + rhs.value.15
+    
+    return m
+}
+
 /// Multiply
 @inline(__always)
 public func * (lhs: Matrix4, rhs: Matrix4) -> Matrix4 {
     
-    var m = Matrix4.Identity
+    var m = Matrix4.identity
     
     m.value.0  = lhs.value.0 * rhs.value.0  + lhs.value.4 * rhs.value.1  + lhs.value.8 * rhs.value.2   + lhs.value.12 * rhs.value.3;
     m.value.4  = lhs.value.0 * rhs.value.4  + lhs.value.4 * rhs.value.5  + lhs.value.8 * rhs.value.6   + lhs.value.12 * rhs.value.7;
