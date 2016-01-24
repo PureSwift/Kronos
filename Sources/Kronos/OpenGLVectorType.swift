@@ -82,6 +82,14 @@ public extension OpenGLVectorType {
         
         return (vectorEnd - self).length
     }
+    
+    @inline(__always)
+    func project(projectionVector: Self) -> Self {
+        
+        let scale = projectionVector.dotProduct(self) / projectionVector.dotProduct(projectionVector)
+        
+        return projectionVector * scale
+    }
 }
 
 

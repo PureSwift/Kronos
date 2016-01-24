@@ -61,6 +61,15 @@ public func < (lhs: Vector4, rhs: Vector4) -> Bool {
         && lhs.value.3  < rhs.value.3
 }
 
+@inline(__always)
+public func < (lhs: Vector4, rhs: Float) -> Bool {
+    
+    return lhs.value.0  < rhs
+        && lhs.value.1  < rhs
+        && lhs.value.2  < rhs
+        && lhs.value.3  < rhs
+}
+
 // MARK: - Math
 
 /// Negate
@@ -208,6 +217,24 @@ public extension Vector4 {
     var length: Float {
         
         return sqrt(value.0 * value.0 + value.1 * value.1 + value.2 * value.2 + value.3 * value.3)
+    }
+    
+    @inline(__always)
+    func lerp(vectorEnd: Vector4, interpolation: Float) -> Vector4 {
+        
+        return Vector4(value.0 + ((vectorEnd.value.0 - value.0) * interpolation),
+                       value.1 + ((vectorEnd.value.1 - value.1) * interpolation),
+                       value.2 + ((vectorEnd.value.2 - value.2) * interpolation),
+                       value.3 + ((vectorEnd.value.3 - value.3) * interpolation))
+    }
+    
+    @inline(__always)
+    func crossProduct(rhs: Vector4) -> Vector4 {
+        
+        return Vector4(value.1 * rhs.value.2 - value.2 * rhs.value.1,
+                       value.2 * rhs.value.0 - value.0 * rhs.value.2,
+                       value.0 * rhs.value.1 - value.1 * rhs.value.0,
+                       0.0)
     }
 }
 
