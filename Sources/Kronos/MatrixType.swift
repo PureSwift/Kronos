@@ -7,7 +7,7 @@
 //
 
 /// OpenGL Matrix Type
-public protocol OpenGLMatrixType: OpenGLMathType {
+public protocol MatrixType: MathType {
     
     /// The identity matrix.
     static var identity: Self { get }

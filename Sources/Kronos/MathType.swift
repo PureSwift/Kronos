@@ -7,7 +7,7 @@
 //
 
 /// OpenGL Math type
-public protocol OpenGLMathType: Equatable {
+public protocol MathType: Equatable {
     
     /// The tuple type. (e.g. `(Float, Float)`)
     typealias ScalarTuple

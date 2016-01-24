@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		6E18ED471C542E4A002896B6 /* StencilFuncion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18ED461C542E4A002896B6 /* StencilFuncion.swift */; };
 		6E18ED4A1C545B10002896B6 /* Matrix4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE1725D1C51EA68005D65D8 /* Matrix4Tests.swift */; };
-		6E18ED5F1C554C00002896B6 /* OpenGLVectorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18ED5E1C554C00002896B6 /* OpenGLVectorType.swift */; };
-		6E18ED611C554C0B002896B6 /* OpenGLMatrixType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18ED601C554C0B002896B6 /* OpenGLMatrixType.swift */; };
+		6E18ED5F1C554C00002896B6 /* VectorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18ED5E1C554C00002896B6 /* VectorType.swift */; };
+		6E18ED611C554C0B002896B6 /* MatrixType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18ED601C554C0B002896B6 /* MatrixType.swift */; };
 		6EE172391C51E851005D65D8 /* SwiftGL.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE172381C51E851005D65D8 /* SwiftGL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EE172401C51E851005D65D8 /* Kronos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE172351C51E851005D65D8 /* Kronos.framework */; };
 		6EE1725E1C51EA68005D65D8 /* ClearBufferMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172511C51EA68005D65D8 /* ClearBufferMask.swift */; };
@@ -18,7 +18,7 @@
 		6EE172601C51EA68005D65D8 /* Matrix3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172531C51EA68005D65D8 /* Matrix3.swift */; };
 		6EE172611C51EA68005D65D8 /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172541C51EA68005D65D8 /* Matrix4.swift */; };
 		6EE172621C51EA68005D65D8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172551C51EA68005D65D8 /* Error.swift */; };
-		6EE172631C51EA68005D65D8 /* OpenGLMathType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172561C51EA68005D65D8 /* OpenGLMathType.swift */; };
+		6EE172631C51EA68005D65D8 /* MathType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172561C51EA68005D65D8 /* MathType.swift */; };
 		6EE172641C51EA68005D65D8 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172571C51EA68005D65D8 /* Program.swift */; };
 		6EE172651C51EA68005D65D8 /* Vector2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172581C51EA68005D65D8 /* Vector2.swift */; };
 		6EE172661C51EA68005D65D8 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE172591C51EA68005D65D8 /* Vector3.swift */; };
@@ -44,8 +44,8 @@
 
 /* Begin PBXFileReference section */
 		6E18ED461C542E4A002896B6 /* StencilFuncion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StencilFuncion.swift; sourceTree = "<group>"; };
-		6E18ED5E1C554C00002896B6 /* OpenGLVectorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGLVectorType.swift; sourceTree = "<group>"; };
-		6E18ED601C554C0B002896B6 /* OpenGLMatrixType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGLMatrixType.swift; sourceTree = "<group>"; };
+		6E18ED5E1C554C00002896B6 /* VectorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorType.swift; sourceTree = "<group>"; };
+		6E18ED601C554C0B002896B6 /* MatrixType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixType.swift; sourceTree = "<group>"; };
 		6EE172351C51E851005D65D8 /* Kronos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kronos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE172381C51E851005D65D8 /* SwiftGL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGL.h; sourceTree = "<group>"; };
 		6EE1723A1C51E851005D65D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		6EE172531C51EA68005D65D8 /* Matrix3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix3.swift; sourceTree = "<group>"; };
 		6EE172541C51EA68005D65D8 /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4.swift; sourceTree = "<group>"; };
 		6EE172551C51EA68005D65D8 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		6EE172561C51EA68005D65D8 /* OpenGLMathType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGLMathType.swift; sourceTree = "<group>"; };
+		6EE172561C51EA68005D65D8 /* MathType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathType.swift; sourceTree = "<group>"; };
 		6EE172571C51EA68005D65D8 /* Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		6EE172581C51EA68005D65D8 /* Vector2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector2.swift; sourceTree = "<group>"; };
 		6EE172591C51EA68005D65D8 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
@@ -167,9 +167,9 @@
 		6EE1726C1C51EBE5005D65D8 /* Math Types */ = {
 			isa = PBXGroup;
 			children = (
-				6EE172561C51EA68005D65D8 /* OpenGLMathType.swift */,
-				6E18ED5E1C554C00002896B6 /* OpenGLVectorType.swift */,
-				6E18ED601C554C0B002896B6 /* OpenGLMatrixType.swift */,
+				6EE172561C51EA68005D65D8 /* MathType.swift */,
+				6E18ED5E1C554C00002896B6 /* VectorType.swift */,
+				6E18ED601C554C0B002896B6 /* MatrixType.swift */,
 				6EE172581C51EA68005D65D8 /* Vector2.swift */,
 				6EE172591C51EA68005D65D8 /* Vector3.swift */,
 				6EE1725A1C51EA68005D65D8 /* Vector4.swift */,
@@ -306,12 +306,12 @@
 				6EE172761C51F690005D65D8 /* Shader.swift in Sources */,
 				6EE1727A1C521F72005D65D8 /* Buffer.swift in Sources */,
 				6EE172711C51F34C005D65D8 /* UIKitConvertible.swift in Sources */,
-				6E18ED611C554C0B002896B6 /* OpenGLMatrixType.swift in Sources */,
-				6EE172631C51EA68005D65D8 /* OpenGLMathType.swift in Sources */,
+				6E18ED611C554C0B002896B6 /* MatrixType.swift in Sources */,
+				6EE172631C51EA68005D65D8 /* MathType.swift in Sources */,
 				6EE1725E1C51EA68005D65D8 /* ClearBufferMask.swift in Sources */,
 				6E18ED471C542E4A002896B6 /* StencilFuncion.swift in Sources */,
 				6EE172611C51EA68005D65D8 /* Matrix4.swift in Sources */,
-				6E18ED5F1C554C00002896B6 /* OpenGLVectorType.swift in Sources */,
+				6E18ED5F1C554C00002896B6 /* VectorType.swift in Sources */,
 				6EE172781C51F6F1005D65D8 /* ShaderType.swift in Sources */,
 				6EE172741C51F4FD005D65D8 /* Color.swift in Sources */,
 				6EE172671C51EA68005D65D8 /* Vector4.swift in Sources */,

@@ -7,7 +7,7 @@
 //
 
 /// OpenGL Vector Type
-public protocol OpenGLVectorType: OpenGLMathType, Comparable {
+public protocol VectorType: MathType, Comparable {
     
     /// Divide
     ///
