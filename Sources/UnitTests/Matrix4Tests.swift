@@ -1,6 +1,6 @@
 //
 //  Matrix4Tests.swift
-//  SwiftGL
+//  Kronos
 //
 //  Created by Alsey Coleman Miller on 1/21/16.
 //  Copyright © 2016 PureSwift. All rights reserved.
@@ -11,7 +11,7 @@
 #endif
 
 import XCTest
-import SwiftGL
+import Kronos
 
 final class Matrix4Tests: XCTestCase {
     
