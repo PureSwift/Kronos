@@ -97,12 +97,12 @@ public struct Program {
         
         guard logLength > 0 else { return nil }
         
-        let cString = UnsafeMutablePointer<CChar>.alloc(Int(logLength))
-        defer { cString.dealloc(Int(logLength)) }
+        let cString = UnsafeMutablePointer<CChar>(allocatingCapacity: Int(logLength))
+        defer { cString.deallocateCapacity(Int(logLength)) }
         
         glGetProgramInfoLog(name, GLsizei(logLength), nil, cString)
         
-        return String.fromCString(cString)!
+        return String.init(utf8String: cString)!
     }
 }
 

@@ -37,29 +37,29 @@ public protocol VectorType: MathType, Comparable {
     
     /// Returns a new vector whose component value at each position is the largest component value
     /// at the same position in the source vectors.
-    func maximum(lhs: Self) -> Self
+    func maximum(_ rhs: Self) -> Self
     
     /// Returns a new vector whose component value at each position is the smallest component value
     /// at the same position in the source vectors.
-    func minimum(rhs: Self) -> Self
+    func minimum(_ rhs: Self) -> Self
     
     /// Returns a new vector created by normalizing an input vector to a length of 1.0.
     func normalize() -> Self
     
     /// Returns the dot product of two vectors.
-    func dotProduct(rhs: Self) -> Float
+    func dotProduct(_ rhs: Self) -> Float
     
     /// Returns the length of a vector.
     var length: Float { get }
     
     /// Returns the distance between two points.
-    func distance(vectorEnd: Self) -> Float
+    func distance(_ vectorEnd: Self) -> Float
     
     /// Returns a new vector created by linearly interpreting between two vectors.
-    func lerp(vectorEnd: Self, interpolation: Float) -> Self
+    func lerp(_ vectorEnd: Self, interpolation: Float) -> Self
     
     /// Project the vector onto the vector, `projectionVector`.
-    func project(projectionVector: Self) -> Self
+    func project(_ projectionVector: Self) -> Self
 }
 
 // MARK: - Protocol Extensions
@@ -75,13 +75,13 @@ public extension VectorType {
     }
     
     @inline(__always)
-    func distance(vectorEnd: Self) -> Float {
+    func distance(_ vectorEnd: Self) -> Float {
         
         return (vectorEnd - self).length
     }
     
     @inline(__always)
-    func project(projectionVector: Self) -> Self {
+    func project(_ projectionVector: Self) -> Self {
         
         let scale = projectionVector.dotProduct(self) / projectionVector.dotProduct(projectionVector)
         

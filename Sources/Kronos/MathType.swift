@@ -10,7 +10,7 @@
 public protocol MathType: Equatable {
     
     /// The tuple type. (e.g. `(Float, Float)`)
-    typealias ScalarTuple
+    associatedtype ScalarTuple
     
     /// The tuple value of the OpenGL Math type.
     var value: ScalarTuple { get set }

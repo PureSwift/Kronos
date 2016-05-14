@@ -10,7 +10,7 @@
     import OpenGLES
 #endif
 
-extension GLboolean: BooleanType {
+extension GLboolean: Boolean {
     
     public var boolValue: Bool {
         

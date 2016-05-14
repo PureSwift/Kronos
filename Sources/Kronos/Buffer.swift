@@ -20,11 +20,11 @@ public struct Buffer {
     // MARK: - Initialization
     
     /// Generate `count` number of buffers.
-    public static func generate(count: Int) -> [Buffer] {
+    public static func generate(_ count: Int) -> [Buffer] {
         
         assert(count > 0, "Invalid parameter 'count': \(count)")
         
-        var bufferNames = [GLuint](count: count, repeatedValue: 0)
+        var bufferNames = [GLuint](repeating: 0, count: count)
         
         glGenBuffers(GLsizei(count), &bufferNames)
         
@@ -57,7 +57,7 @@ public struct Buffer {
     // MARK: - Methods
     
     @inline(__always)
-    public static func delete(buffers: [Buffer]) {
+    public static func delete(_ buffers: [Buffer]) {
         
         var bufferNames = buffers.map { $0.name }
         

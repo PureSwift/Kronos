@@ -11,7 +11,7 @@
 #endif
 
 /// OpenGL Errors
-public enum OpenGLError: GLenum, ErrorType {
+public enum OpenGLError: GLenum, ErrorProtocol {
     
     case InvalidEnum                    = 0x0500
     

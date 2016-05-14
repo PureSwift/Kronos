@@ -159,7 +159,7 @@ public func / (lhs: Vector4, rhs: Float) -> Vector4 {
 public extension Vector4 {
     
     @inline(__always)
-    func maximum(rhs: Vector4) -> Vector4 {
+    func maximum(_ rhs: Vector4) -> Vector4 {
         
         var max = self
         
@@ -180,7 +180,7 @@ public extension Vector4 {
     }
     
     @inline(__always)
-    func minimum(rhs: Vector4) -> Vector4 {
+    func minimum(_ rhs: Vector4) -> Vector4 {
         
         var min = self
         
@@ -209,7 +209,7 @@ public extension Vector4 {
     }
     
     @inline(__always)
-    func dotProduct(rhs: Vector4) -> Float {
+    func dotProduct(_ rhs: Vector4) -> Float {
         
         return value.0 * rhs.value.0 + value.1 * rhs.value.1 + value.2 * rhs.value.2 + value.3 * rhs.value.3
     }
@@ -220,7 +220,7 @@ public extension Vector4 {
     }
     
     @inline(__always)
-    func lerp(vectorEnd: Vector4, interpolation: Float) -> Vector4 {
+    func lerp(_ vectorEnd: Vector4, interpolation: Float) -> Vector4 {
         
         return Vector4(value.0 + ((vectorEnd.value.0 - value.0) * interpolation),
                        value.1 + ((vectorEnd.value.1 - value.1) * interpolation),

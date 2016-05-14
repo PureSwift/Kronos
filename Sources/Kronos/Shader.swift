@@ -76,21 +76,18 @@ public struct Shader {
     /// The number of strings in the array is specified by count. If length is NULL, each string is assumed to be null terminated. If length is a value other than NULL, it points to an array containing a string length for each of the corresponding elements of string. Each element in the length array may contain the length of the corresponding string (the null character is not counted as part of the string length) or a value less than 0 to indicate that the string is null terminated. The source code strings are not scanned or parsed at this time; they are simply copied into the specified shader object.
     public func setSource(source: [String]) {
         
-        let cStringPointers = UnsafeMutablePointer<UnsafeMutablePointer<CChar>>.alloc(source.count)
-        defer { cStringPointers.dealloc(source.count) }
+        let cStringPointers = UnsafeMutablePointer<UnsafePointer<GLchar>?>(allocatingCapacity: source.count)
+        defer { cStringPointers.deallocateCapacity(source.count) }
         
         for string in source {
             
-            let stringPointer = UnsafeMutablePointer<CChar>.alloc(string.utf8.count)
-            defer { stringPointer.dealloc(string.utf8.count) }
+            let stringPointer = UnsafeMutablePointer<GLchar>(allocatingCapacity: string.utf8.count)
+            defer { stringPointer.deallocateCapacity(string.utf8.count) }
             
-            string.withCString { (charPointer) in
-                
-                memcpy(stringPointer, charPointer, source.count - 1)
-            }
+            string.withCString { memcpy(stringPointer, $0, source.count - 1) }
         }
         
-        let pointer = UnsafePointer<UnsafePointer<CChar>>(cStringPointers)
+        let pointer = UnsafePointer<UnsafePointer<GLchar>?>(cStringPointers)
         
         glShaderSource(name, GLsizei(source.count), pointer, nil)
     }

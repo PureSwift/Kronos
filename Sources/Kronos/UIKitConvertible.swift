@@ -13,7 +13,7 @@ import UIKit
 /// Type that can be converted to and from Apple's ***UIKit*** equivalent types.
 public protocol UIKitConvertible {
     
-    typealias UIKitType
+    associatedtype UIKitType
     
     /// Initializes the type from Apple's **UIKit** equivalent type.
     init(_ UIKit: UIKitType)
